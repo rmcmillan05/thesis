@@ -1,0 +1,144 @@
+\ProvidesPackage{mystyle}
+
+%%% FONTS %%
+%\newif\ifmyfont
+%\def\myfont{Times New Roman}
+%%\def\myfont{Droid Serif}
+%\def\mymathfont{\myfont}
+%%\myfonttrue                            % Uncomment to use fonts defined above
+
+%\usepackage[light,math]{iwona}
+%\usepackage[T1]{fontenc}
+
+%% CHARACTERS %%
+\newif\ifswitchphi
+\switchphitrue                         % Uncomment to switch \phi with \varphi
+
+%% PACKAGES %%
+
+\usepackage{newcent}
+\usepackage{amsmath,amsfonts,amssymb}   % maths typing enhancements
+\usepackage{fixltx2e}                   % use \textsubscript and other fixes
+\usepackage{array}
+\usepackage{fancyhdr}                   % customisation of page headers and footers
+
+\usepackage[sf,bf]{titlesec}
+
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+    \monthname[\THEMONTH] \THEYEAR}
+
+\usepackage{color}
+
+\usepackage[small,bf,hang,font=sf]{caption}     % fancy captions
+\setlength{\abovecaptionskip}{0.5cm}
+\numberwithin{equation}{chapter}
+\numberwithin{table}{chapter}
+\numberwithin{figure}{chapter}
+
+\usepackage[hidelinks]{hyperref}
+\def\equationautorefname~#1\null{%
+  Equation~(#1)\null
+}
+
+\usepackage{perpage}    % Reset footnote symbols every page
+\MakePerPage{footnote}
+
+\usepackage[xetex]{graphicx}
+\usepackage{subcaption}
+
+\usepackage{setspace}
+\usepackage[a4paper,inner=4.0cm,outer=2.5cm,top=2.5cm,bottom=4cm]{geometry}
+\setlength{\headsep}{0.6cm}
+%\setlength{\footskip}{2.5cm}
+%%\setlength{\textheight}{24cm}
+%%\setlength{\textwidth}{17cm}
+
+%%\setlength{\oddsidemargin}{-0.4cm}
+%%\setlength{\evensidemargin}{-0.4cm}   % matters in book documentclass
+%\parskip=10pt                         % changes spacing between paragraphs
+%%\parindent=0pt                       % changes paragraph indentation
+%
+\pagestyle{fancy}   % Defines how pages look; other styles: plain, headings
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername}\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ \MakeUppercase{#1}}}
+\fancyhead[L]{\rightmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancyfoot[C]{}
+\setlength{\skip\footins}{1.0cm}
+\setlength{\footnotesep}{0.5cm}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\makeatletter           % Remove page number from chapter first pages
+\let\ps@plain\ps@empty  %
+\makeatother            %
+
+\bibliographystyle{unsrt}
+
+%%% FONTS CONT'D %%
+%\ifmyfont
+%
+%%RYAN
+%\usepackage[log-declarations=false]{xparse}
+%\usepackage[quiet]{mathspec} %loads fontspec as well
+%\setmathrm[Scale=0.95]{\mymathfont}
+%\setmathfont(Digits,Latin,Greek)[Scale=0.95]{\mymathfont}
+%\usepackage[quiet]{fontspec}
+%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+%\setmainfont[Scale=0.95]{\myfont}
+%\setsansfont[Scale=0.95]{\myfont}
+%\setmonofont[Scale=0.95]{DejaVu Sans Mono}
+%
+%\makeatletter
+%\let\scshape\relax % to avoid a warning
+%\DeclareRobustCommand\scshape{%
+%  \not@math@alphabet\scshape\relax
+%  \ifnum\pdf@strcmp{\f@family}{\familydefault}=\z@
+%    \fontfamily{lmr}%
+%  \fi
+%  \fontshape\scdefault\selectfont}
+%\makeatother
+%
+%%%DAN
+%%\usepackage{times}
+%%\usepackage{helvet}
+%%\renewcommand*\familydefault{\sfdefault} 
+%%\usepackage[tx,helvet]{sfmath}
+%
+%\fi
+
+%% SWITCH CHARACTERS %%
+\ifswitchphi
+\let\temp\phi
+\let\phi\varphi
+\let\varphi\temp
+\fi
+%% NEW COMMANDS %%
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}} % symbol footnotes
+\newcommand{\op}[1]{\widehat{\mathbf{#1}}}
+\newcommand{\bm}[1]{\mathbf{#1}}
+\newcommand{\inprod}[2]{\left\langle #1 \left| #2 \right.\right\rangle}
+\newcommand{\expec}[3]{\left\langle #1 \left| \ #2 \ \right| #3 \right\rangle}
+\newcommand{\antis}[1]{\langle #1 || #1 \rangle}
+\newcommand{\tr}[1]{\text{tr} \left( #1 \right)}
+\newcommand{\imag}{\text{\rmfamily{i}}}
+\newcommand{\sus}[2]{\chi_{#1}^{(#2)}}
+\newcommand{\linsus}{\chi^{(1)}}
+\newcommand{\sust}[1]{\bm\chi^{(#1)}}
+\newcommand{\pol}[2]{P_{#1}^{(#2)}}
+\newcommand{\linpol}{P^{(1)}}
+\newcommand{\rhop}[2]{\rho_{#1}^{(#2)}}
+\newcommand{\rhopd}[2]{\dot{\rho}_{#1}^{(#2)}}
+\newcommand{\rhopb}[1]{\bm\rho^{(#1)}}
+\newcommand{\rhopc}[1]{\rho^{(#1)}}
+\newcommand{\cc}{\text{c.c.}}
+\newcommand{\ipart}[1]{\ \text{Im}\left[#1 \right]}
+\newcommand{\rpart}[1]{\ \text{Re}\left[#1 \right]}
+\newcommand{\ts}[1]{\textsubscript{#1}}
+\newcommand{\mos}{MoS\textsubscript{2}\,}
+
+%\relpenalty=10000    % Don't line-break at equations
+%\binoppenalty=10000

@@ -1,0 +1,104 @@
+\documentclass[11pt]{report}
+\usepackage{mystyle}
+\usepackage{epigraph}
+
+\begin{document}
+
+%% TITLE PAGE %%
+\input{tex/title/title.tex}
+%%
+
+\pagenumbering{roman}
+
+%% TABLE OF CONTENTS %%
+%\setstretch{1.5}
+\clearpage
+\tableofcontents
+
+%% LIST OF FIGURES %%
+\clearpage
+\listoffigures
+%%
+
+\pagenumbering{arabic}
+\setlength{\topmargin}{0.4cm}
+\setlength{\headsep}{0.6cm}
+%\setstretch{1.5}
+
+%% INTRO %%
+\clearpage
+\chapter{Background and Introduction}
+
+\section{Motivation - Solar Technology}
+A brief discussion about renewable energy and solar technology in particular.
+We'll mention the various types of latest generation solar cells with a focus
+on 2D materials.
+\section{2D Materials in Photonics}
+Properties of 2D materials that make them useful in photonics with
+experimental and theoretical results.
+\section{Increasing Light Absorption in 2D Materials}
+Different methods of increasing light absorption with attention towards
+plasmonic field enhancement.
+%\input{tex/intro/intro.tex}
+%\input{tex/intro/big_pic.tex}
+%\input{tex/intro/small_pic.tex}
+%\input{tex/intro/nano_pic.tex}
+%%
+
+%% THEORY %%
+\clearpage
+\chapter{Theory}
+
+\section{Background Theory}
+\subsection{Electronic Structure Calculations}
+Brief discussion of various methods for calculating electronic structure,
+focussing on Kohn-Sham DFT.
+\subsection{Excited State Calculations}
+Brief discussion of TDDFT, linear response and the (time-dependent)
+Bethe-Salpeter Equation.
+\subsection{Obtaining Optical Properties}
+A bit about dielectric functions and absorption spectra and how they are
+obtained from excited state calculations.
+\section{Projected Equations of Motion Method for Composite Materials}
+This will include a little about obtaining the polarization from classical
+electrodynamics. The dipole-dipole model will be presented and the PEOM method
+will be derived.
+%\input{tex/theory/intro.tex}
+%\input{tex/theory/elec_struc/ipm.tex}
+%%
+
+%% RESULTS %%
+\clearpage
+\chapter{Results}
+
+Here we use the SQD-MNP system to validate the method as well as providing new
+results for femtosecond pulse interaction. The method is further verified by
+performing calculations on various monolayer systems using TDDFT and BSE
+theory. We'll then go on to model a monolayer of \mos with gold nanoparticles.
+
+\section{Semiconducting Quantum Dot-Metal Nanoparticle Hybrid}
+\subsection{Describing the System}
+\subsection{Energy Absorption Rates}
+\subsection{Population Inversion}
+\section{Optical Spectra for \mos Composites}
+\subsection{\mos Monolayer}
+\subsection{\mos / Graphene Monolayers}
+\subsection{\mos Bilayer}
+\subsection{\mos Monolayer on Gold Surface}
+\subsection{\mos Monolayer with Gold Nanoparticles}
+%%
+
+%% CONCLUSION %%
+\clearpage
+\chapter{Conclusions}
+We will have shown that the PEOM method provides a way for modelling the
+plasmonic field enhancement from gold nanoparticles on a \mos monolayer. Such
+theoretical calculations have not been performed before.
+
+\setstretch{1.0}
+%% BIBLIOGRAPHY %%
+\clearpage
+\bibliography{$HOME/Dropbox/PhD/latex-files/Master,$HOME/Dropbox/PhD/latex-files/websites}
+%%
+
+\end{document}

@@ -1,0 +1,52 @@
+#!/bin/bash
+set -e # EXITS ON FIRST ERROR
+
+if [ $# = 0 ]; then
+    echo "No input detected."
+    exit 0
+fi
+
+if [ $# -gt 2 ]; then
+    echo "To many arguments."
+    exit 0
+fi
+
+IN=$1
+BIB='no'
+
+if [ $# -eq 2 ]; then
+    if [ "$1" = '-b' ]; then
+        IN=$2
+        BIB='yes'
+    else
+        echo "Too many arguments."
+        exit 0
+    fi
+fi 
+
+FILE=${IN/.tex}
+export TEXINPUTS=.//:$TEXINPUTS
+OUT=output
+LATEX_COMP=xelatex
+
+if [ ! -e $IN ]; then
+    echo "Input file ${IN} does not exist."
+    exit 1
+fi
+
+mkdir -p $OUT
+
+$LATEX_COMP -output-directory=$OUT $FILE
+if [ $BIB = 'yes' ]; then
+    bibtex $OUT/$FILE
+    $LATEX_COMP -output-directory=$OUT $FILE
+fi
+$LATEX_COMP -output-directory=$OUT $FILE
+
+if [ $LATEX_COMP = latex ]; then
+    cd $OUT
+    dvipdf $FILE
+    cd -
+fi
+
+#gnome-open ${OUT}/${FILE}.pdf

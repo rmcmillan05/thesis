@@ -1,0 +1,22 @@
+\contentsline {chapter}{\numberline {1}Background and Introduction}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation - Solar Technology}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}2D Materials in Photonics}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Increasing Light Absorption in 2D Materials}{2}{section.1.3}
+\contentsline {chapter}{\numberline {2}Theory}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background Theory}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Electronic Structure Calculations}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Excited State Calculations}{3}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Obtaining Optical Properties}{3}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Projected Equations of Motion Method for Composite Materials}{3}{section.2.2}
+\contentsline {chapter}{\numberline {3}Results}{4}{chapter.3}
+\contentsline {section}{\numberline {3.1}Semiconducting Quantum Dot-Metal Nanoparticle Hybrid}{4}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Describing the System}{4}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Energy Absorption Rates}{4}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Population Inversion}{4}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Optical Spectra for MoS\textsubscript {2}\tmspace +\thinmuskip {.1667em}Composites}{4}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}MoS\textsubscript {2}\tmspace +\thinmuskip {.1667em}Monolayer}{4}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}MoS\textsubscript {2}\tmspace +\thinmuskip {.1667em}/ Graphene Monolayers}{4}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}MoS\textsubscript {2}\tmspace +\thinmuskip {.1667em}Bilayer}{4}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}MoS\textsubscript {2}\tmspace +\thinmuskip {.1667em}Monolayer on Gold Surface}{4}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}MoS\textsubscript {2}\tmspace +\thinmuskip {.1667em}Monolayer with Gold Nanoparticles}{4}{subsection.3.2.5}
+\contentsline {chapter}{\numberline {4}Conclusions}{5}{chapter.4}

@@ -1,0 +1,51 @@
+\documentclass[10pt]{report}
+\usepackage{mystyle}
+\usepackage{epigraph}
+
+\begin{document}
+
+%% TITLE PAGE %%
+\input{tex/title/title.tex}
+%%
+
+\pagenumbering{roman}
+\setstretch{1.5}
+
+%% TABLE OF CONTENTS %%
+\clearpage
+\tableofcontents
+
+%% LIST OF FIGURES %%
+\clearpage
+\listoffigures
+%%
+
+\pagenumbering{arabic}
+\setlength{\topmargin}{0.4cm}
+\setlength{\headsep}{0.6cm}
+
+%% INTRO %%
+\clearpage
+\input{tex/background_and_info/intro.tex}
+\input{tex/background_and_info/motivation.tex}
+%%
+
+%% THEORY %%
+\clearpage
+%%
+
+%% RESULTS %%
+\clearpage
+%%
+
+%% CONCLUSION %%
+\clearpage
+%%
+
+%% BIBLIOGRAPHY %%
+\setstretch{1.0}
+\clearpage
+\bibliography{thesis_bib}
+%%
+
+\end{document}

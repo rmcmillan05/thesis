@@ -1,0 +1,95 @@
+\subsection{Analytical and Semi-Analytical Solutions}\label{sec:sqd-anal}
+
+To solve \cref{eq:eoms} analytically, we first separate out the slowly and quickly oscillating terms of the
+off-diagonal density matrix elements:
+%
+\begin{subequations}
+    \begin{align}
+        \rho_{12}(t) = \bar\rho_{12}(t)e^{\imagn\omega_L t} \ , \\
+        \rho_{21}(t) = \bar\rho_{21}(t)e^{-\imagn\omega_L t} \ , 
+    \end{align}
+    \label{eq:rhobar}
+\end{subequations}
+%
+where $\bar\rho_{12}(t)$ and $\bar\rho_{21}(t)$ are assumed to vary much larger
+timescale than $2\pi/\omega_L$. We assume a {\it slowly-varying} pulse
+envelope so that $f(t)$ also varies on a timescale larger that $2\pi/\omega_L$.
+Thus, from \cref{eq:esqd}, we can express the field felt by the SQD
+approximately as (see Appendix REF)
+%
+\begin{equation}
+    \esqdeff(t) = \frac{\hbar}{\mut}\left[ \left( \frac{\Omega(t)}{2}e^{-\imagn\omega_L t} +
+    G\rho_{21}(t) \right) + \text{c.c.} \right] ,
+    \label{eq:effective_field}
+\end{equation}
+%
+where
+%
+\begin{subequations}
+    \begin{align}
+        \Omega(t) &= f(t) \omegaeff \ , \label{eq:omega} \\
+        \omegaeff &=  \Omega_0 \left[ 1 +
+        \frac{g}{R^3}\alphamnp(\omega_L) \right] \ ,\label{eq:omegaeff}\\
+        G &= \frac{g^2\mut^2 }{\hbar\epsb R^6}\alphamnp(\omega_L) \ , \label{eq:G}
+    \end{align}
+\end{subequations}
+%
+where
+%
+\begin{equation}
+    \Omega_0 = \mut E_0/\hbar 
+    \label{eq:omega_0}
+\end{equation}
+%
+is the Rabi frequency of the isolated SQD.
+
+One may then substitute \cref{eq:effective_field} into the density matrix EOMs
+in \cref{eq:eoms} and determine a numerical solution (e.g. using the
+fourth-order Runge-Kutta method). This is equivalent to the method used by Yang
+et al. in REF. Alternatively, one can make use of the rotating wave
+approximation (RWA) which assumes that the carrier frequency is close to
+resonant with the exciton frequency ($\omega_L\approx\omega_0$) so that terms
+oscillating at frequencies far from $\omega_0$ can be neglected. By
+substituting \cref{eq:effective_field} into \cref{eq:eoms} and employing the RWA,
+one arrives at the following, modified RWA EOMs for the density matrix (see
+Appendix REF)
+%
+\begin{equation}
+    \begin{cases}
+        \dot\Delta &= 4\imag{\left( \frac{\Omega}{2}+G\bar\rho_{21} \right)\bar\rho_{12}}
+        + \Gamma_{11}\left( 1-\Delta \right) \\
+        \dot{\bar\rho}_{21} &= \left[ \imagn\left( \omega_L-\omega_0 +G\Delta
+        \right)-\Gamma_{21} \right]\bar\rho_{21} + \imagn\frac{\Omega}{2}\Delta 
+    \label{eq:eoms_rwa}
+    \end{cases}
+    \ .
+\end{equation}
+%
+One can then numerically solve these modified EOMs to determine the dynamics of the
+slowly-varying parts, $\bar\rho_{21}(t)$, which should be similar to the full
+dynamics of $\rho_{21}(t)$ provided the RWA is valid. This is equivalent to the
+method used in REFs.
+
+In the case of a rectangular envelope of unitary height ($f(t)=1$), i.e. a
+monochromatic wave, 
+%
+\begin{equation}
+    \eext(t) = E_0\cos(\omega_L t) \ ,
+    \label{eq:plane_wave}
+\end{equation}
+%
+\cref{eq:eoms_rwa} may be solved analytically under the steady-state conditions
+$\dot\Delta=\dot{\bar\rho}_{21}=0$ to obtain
+%
+\begin{equation}
+    \rhoss =
+    \frac{-\omegaeff\Deltass}{\omega_L-\omega_0+G\Deltass
+        +\imagn\Gamma_{21}},
+    \label{eq:steady-state}
+\end{equation}
+%
+where $\Deltass$ is found by solving a cubic equation (see Appendix REF).
+
+\cref{eq:steady-state} allows us to calculate the energy absorption rate of the
+system, while we can investigate population inversion by solving the density
+matrix EOMs directly.

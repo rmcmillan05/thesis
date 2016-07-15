@@ -1,2 +1,22 @@
 \contentsline {chapter}{\numberline {1}Background and Introduction}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation - Solar Technology}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}2D Materials in Photonics}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Increasing Light Absorption in 2D Materials}{2}{section.1.3}
+\contentsline {chapter}{\numberline {2}Theory}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Background Theory}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Electronic Structure Calculations}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Excited State Calculations}{3}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Obtaining Optical Properties}{3}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Projected Equations of Motion (PEOM) Method for\\ {Semiconductor-Metal} Composites}{3}{section.2.2}
+\contentsline {chapter}{\numberline {3}Results}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Semiconducting Quantum Dot-Metal Nanoparticle Hybrid}{8}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Describing the System}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Solution within the PEOM Method}{11}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Analytical and Semi-Analytical Solutions}{11}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Energy Absorption Rates}{13}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Population Inversion}{15}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}Optical Spectra for \ce {MoS2} Composites}{15}{section.3.2}
+\contentsline {chapter}{\numberline {A}Semiconducting Quantum Dot-Metal Nanoparticle Hybrid: Solution within the Rotating Wave Approximation}{16}{appendix.A}
+\contentsline {chapter}{\numberline {B}The Projected Equations of Motion Method}{17}{appendix.B}
+\contentsline {section}{\numberline {B.1}Generalization to Anisotropic Media}{17}{section.B.1}
+\contentsline {chapter}{\numberline {C}Fourth-Order Runge-Kutta Method for Solving First-Order ODEs}{19}{appendix.C}

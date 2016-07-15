@@ -1,6 +1,46 @@
 \documentclass[10pt]{report}
+
+%##############################################################################%
+% PACKAGES %
+%##############################################################################%
+
+%% FONTS %%
+%\usepackage[light,math]{iwona}
+%\usepackage[T1]{fontenc}
+%\usepackage{newcent}
+\usepackage[sc]{mathpazo}
+%\usepackage{helvet}
+
+%% MATH %%
+\usepackage{amsmath,amsfonts,amssymb}   % maths typing enhancements
+\usepackage{array}
+\usepackage[range-units=single]{siunitx}
+\usepackage{mhchem}
+
+%% FORMATTING %%
+\usepackage{fancyhdr}                   % customisation of page headers and footers
+\usepackage[sf,bf]{titlesec}
+\usepackage{datetime}
+\usepackage{color}
+\usepackage[small,bf,hang,font=sf]{caption}     % fancy captions
+\usepackage[hidelinks]{hyperref}
+\usepackage[xetex]{graphicx}
+\usepackage{subcaption}
+\usepackage{bm}
+\usepackage{setspace}
+\usepackage[a4paper,inner=4.0cm,outer=2.5cm,top=2.5cm,bottom=4cm]{geometry}
+%\usepackage{epigraph}
+
+%% FIXES %%
+\usepackage{fixltx2e}                   % use \textsubscript and other fixes
+\usepackage[capitalise]{cleveref}
+
+%% CUSTOM COMMANDS ETC. %%
 \usepackage{mystyle}
-\usepackage{epigraph}
+
+%##############################################################################%
+% DOCUMENT %
+%##############################################################################%
 
 \begin{document}
 
@@ -27,25 +67,56 @@
 %% INTRO %%
 \clearpage
 \input{tex/background_and_info/intro.tex}
+
 \input{tex/background_and_info/motivation.tex}
+\input{tex/background_and_info/2d.tex}
+\input{tex/background_and_info/light_2d.tex}
 %%
 
 %% THEORY %%
 \clearpage
+\input{tex/theory/intro.tex}
+
+\input{tex/theory/background/intro.tex}
+\input{tex/theory/background/elec_struc.tex}
+\input{tex/theory/background/ex_state.tex}
+\input{tex/theory/background/opt_prop.tex}
+
+\input{tex/theory/peom.tex}
 %%
 
 %% RESULTS %%
 \clearpage
+\input{tex/results/intro.tex}
+
+\input{tex/results/sqd-mnp/intro.tex}
+\input{tex/results/sqd-mnp/sqd-mnp_setup.tex}
+\input{tex/results/sqd-mnp/peom_sol.tex}
+\input{tex/results/sqd-mnp/analytical.tex}
+\input{tex/results/sqd-mnp/en_abs_rates.tex}
+\input{tex/results/sqd-mnp/pop_inv.tex}
+
+\input{tex/results/mos2/intro.tex}
 %%
 
 %% CONCLUSION %%
 \clearpage
 %%
 
+%% APPENDIX %%
+\clearpage
+\begin{appendix}
+\crefalias{section}{appsec}
+\input{tex/append/sqd-mnp.tex}
+\input{tex/append/peom/intro.tex}
+\input{tex/append/peom/anisotropic.tex}
+\input{tex/append/runge-kutta.tex}
+\end{appendix}
+
 %% BIBLIOGRAPHY %%
 \setstretch{1.0}
 \clearpage
-\bibliography{thesis_bib}
+\bibliography{bib/thesis_bib}
 %%
 
 \end{document}

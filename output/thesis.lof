@@ -1,1 +1,9 @@
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Schematic diagram showing the dipole-dipole interaction between a QS and a CS, separated by a distance $R$. When an external field, $\mathaccentV {vec}17EE_\text {EXT}$, is applied, a dipole moment, $\mathaccentV {vec}17EP_\text {QS}$, is induced in the QS, generating a field. The CS thus experiences this dipole field in addition to the external field, and we denote the total field felt by the CS as $\mathaccentV {vec}17EE_\text {CS}$. Similarly, due to $\mathaccentV {vec}17EE_\text {CS}$, a dipole field is generated in the CS which is in turn felt by the QS in addition to $\mathaccentV {vec}17EE_\text {EXT}$, and we denote the total field felt by the QS as $\mathaccentV {vec}17EE_\text {QS}$. In this way, the QS and CS dynamics are coupled through the external field.\relax }}{5}{figure.caption.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schematic diagram of a spherical metal nanoparticle (MNP) of radius, $a$, separated by a distance, $R$, from a spherical semiconducting quantum dot (SQD) of radius, $r$. The MNP is modelled classically while the SQD is treated as a two-level quantum system with ground state, $\left |1\right \delimiter "526930B $, and excited state, $\left |2\right \delimiter "526930B $, separated by an energy gap of ${\mkern 0.8mu\mathchar '26\mkern -6.8muh}\omega _0$.\relax }}{9}{figure.caption.4}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Real (solid blue) and imaginary (solid red) parts of the MNP frequency-dependent polarizability, $\alpha _\text {MNP}(\omega )$, as given by \cref {eq:alpha_mnp}. The least-squares fit is shown as crosses, obtained from \cref {eq:alphamnp_approx} with $N=$\nobreakspace {}\num {21}. The units of the $y$-axis are in $1/a^3$ where $a$ is the radius of the MNP.\relax }}{12}{figure.caption.5}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

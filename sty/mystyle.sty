@@ -7,48 +7,21 @@
 %\def\mymathfont{\myfont}
 %%\myfonttrue                            % Uncomment to use fonts defined above
 
-%\usepackage[light,math]{iwona}
-%\usepackage[T1]{fontenc}
-
 %% CHARACTERS %%
 \newif\ifswitchphi
 \switchphitrue                         % Uncomment to switch \phi with \varphi
 
-%% PACKAGES %%
-
-\usepackage{newcent}
-\usepackage{amsmath,amsfonts,amssymb}   % maths typing enhancements
-\usepackage{fixltx2e}                   % use \textsubscript and other fixes
-\usepackage{array}
-\usepackage{fancyhdr}                   % customisation of page headers and footers
-
-\usepackage[sf,bf]{titlesec}
-
-\usepackage{datetime}
 \newdateformat{monthyeardate}{%
     \monthname[\THEMONTH] \THEYEAR}
 
-\usepackage{color}
 
-\usepackage[small,bf,hang,font=sf]{caption}     % fancy captions
+% Let Cref Detect Appendix Word
+\crefname{appsec}{Appendix}{Appendices}
+
 \setlength{\abovecaptionskip}{0.5cm}
 \numberwithin{equation}{chapter}
 \numberwithin{table}{chapter}
 \numberwithin{figure}{chapter}
-
-\usepackage[hidelinks]{hyperref}
-\def\equationautorefname~#1\null{%
-  Equation~(#1)\null
-}
-
-\usepackage{perpage}    % Reset footnote symbols every page
-\MakePerPage{footnote}
-
-\usepackage[xetex]{graphicx}
-\usepackage{subcaption}
-
-\usepackage{setspace}
-\usepackage[a4paper,inner=4.0cm,outer=2.5cm,top=2.5cm,bottom=4cm]{geometry}
 \setlength{\headsep}{0.6cm}
 %\setlength{\footskip}{2.5cm}
 %%\setlength{\textheight}{24cm}
@@ -62,7 +35,7 @@
 \pagestyle{fancy}   % Defines how pages look; other styles: plain, headings
 %\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername}\thechapter.\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ \MakeUppercase{#1}}}
-\fancyhead[L]{\rightmark}
+\fancyhead[L]{\leftmark}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
@@ -77,6 +50,7 @@
 
 \bibliographystyle{unsrt}
 
+\sisetup{range-phrase=--}
 %%% FONTS CONT'D %%
 %\ifmyfont
 %
@@ -117,28 +91,63 @@
 \fi
 %% NEW COMMANDS %%
 
-\renewcommand{\thefootnote}{\fnsymbol{footnote}} % symbol footnotes
-\newcommand{\op}[1]{\widehat{\mathbf{#1}}}
-\newcommand{\bm}[1]{\mathbf{#1}}
-\newcommand{\inprod}[2]{\left\langle #1 \left| #2 \right.\right\rangle}
-\newcommand{\expec}[3]{\left\langle #1 \left| \ #2 \ \right| #3 \right\rangle}
-\newcommand{\antis}[1]{\langle #1 || #1 \rangle}
-\newcommand{\tr}[1]{\text{tr} \left( #1 \right)}
-\newcommand{\imag}{\text{\rmfamily{i}}}
-\newcommand{\sus}[2]{\chi_{#1}^{(#2)}}
-\newcommand{\linsus}{\chi^{(1)}}
-\newcommand{\sust}[1]{\bm\chi^{(#1)}}
-\newcommand{\pol}[2]{P_{#1}^{(#2)}}
-\newcommand{\linpol}{P^{(1)}}
-\newcommand{\rhop}[2]{\rho_{#1}^{(#2)}}
-\newcommand{\rhopd}[2]{\dot{\rho}_{#1}^{(#2)}}
-\newcommand{\rhopb}[1]{\bm\rho^{(#1)}}
-\newcommand{\rhopc}[1]{\rho^{(#1)}}
-\newcommand{\cc}{\text{c.c.}}
-\newcommand{\ipart}[1]{\ \text{Im}\left[#1 \right]}
-\newcommand{\rpart}[1]{\ \text{Re}\left[#1 \right]}
-\newcommand{\ts}[1]{\textsubscript{#1}}
-\newcommand{\mos}{MoS\textsubscript{2}\,}
 
-%\relpenalty=10000    % Don't line-break at equations
-%\binoppenalty=10000
+%% EDITING %%
+
+\newcommand{\note}[1]{{\color{red}#1}}
+
+% PEOM %
+
+\newcommand{\vs}{\vec s}
+\newcommand{\vmu}{\vec{\bm\mu}}
+\newcommand{\g}{\vec g}
+\newcommand{\ve}{\hat e}
+\newcommand{\eext}{E_\text{EXT}}
+\newcommand{\veext}{\vec E_\text{EXT}}
+\newcommand{\esqd}{E_\text{SQD}}
+\newcommand{\esqdeff}{E_\text{SQD}^{\text{(eff)}}}
+\newcommand{\eqs}{E_\text{QS}}
+\newcommand{\veqs}{\vec E_\text{QS}}
+\newcommand{\ecs}{E_\text{CS}}
+\newcommand{\vecs}{\vec E_\text{CS}}
+\newcommand{\emnp}{E_\text{MNP}}
+\newcommand{\bemnp}{\bar{E}_\text{MNP}}
+\newcommand{\baresqd}{\bar{E}_\text{SQD}}
+\newcommand{\emnpin}{E_\text{MNP}^{(\text{in})}}
+\newcommand{\epseff}{\epsilon_{\text{effS}}}
+\newcommand{\epss}{\epsilon_{\text{S}}}
+%\newcommand{\epsb}{\epsilon_{\text{B}}}
+\newcommand{\epsb}{}
+\newcommand{\epsm}{\epsilon_{\text{M}}}
+\newcommand{\epsz}{\epsilon_0}
+\newcommand{\psqd}{P_\text{SQD}}
+\newcommand{\pmnp}{P_\text{MNP}}
+\newcommand{\pqs}{P_\text{QS}}
+\newcommand{\pcs}{P_\text{CS}}
+\newcommand{\vpqs}{\vec P_\text{QS}}
+\newcommand{\vpcs}{\vec P_\text{CS}}
+\newcommand{\qsqd}{Q_\text{SQD}}
+\newcommand{\qmnp}{Q_\text{MNP}}
+\newcommand{\vmnp}{V_\text{MNP}}
+\newcommand{\sa}{s_\alpha}
+\newcommand{\imagn}{\text{i}}
+\newcommand{\imag}[1]{\text{Im}\left[ #1 \right]}
+\newcommand{\real}[1]{\text{Re}\left[ #1 \right]}
+\newcommand{\omegaeff}{\Omega_\text{eff}}
+\newcommand{\trace}[1]{\text{tr}\left(#1\right)}
+\newcommand{\mut}{\tilde{\mu}_{21}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\secref}[1]{Sec.~\ref{#1}}
+\newcommand{\wcm}{W/cm$^2$}
+\newcommand{\sech}{\text{sech}}
+\newcommand{\rhoss}{\bar\rho_{21}^\text{s.s.}}
+\newcommand{\Deltass}{\Delta^\text{s.s.}}
+\newcommand{\tm}{t_{i-1}}
+%\newcommand{\mos}{MoS\textsubscript{2}}
+\newcommand{\alphamnp}{\alpha_\text{MNP}}
+\newcommand{\fbar}{\bar{f}}
+
+%% QUANTUM %%
+\newcommand{\state}[1]{\left|#1\right\rangle}
+
+%\newcommand{\ce}[1]{#1}

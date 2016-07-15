@@ -1,0 +1,148 @@
+\subsection{Energy Absorption Rates}\label{sec:en_abs_rates}
+
+The energy absorption rate (EAR) of the SQD-MNP system is a steady-state
+property in response to the monochromatic wave given in \cref{eq:plane_wave}. Suppose a
+steady-state is achieved (i.e. $\dot\Delta=\dot{\bar\rho}_{21}=0$) at
+$t=T^\text{s.s}$. Then we define 
+%
+\begin{subequations}
+\begin{align}
+    \Deltass &= \Delta\left(T^\text{s.s}\right) \ ,\\
+    \rhoss &= \bar\rho_{21}\left(T^\text{s.s}\right)  \ .
+\end{align}
+\label{eq:steady-state}
+\end{subequations}
+%
+The EAR of the SQD is defined as 
+%
+\begin{equation}
+    \qsqd = \frac{1}{2}\hbar\omega_0\Gamma_{11}\left( 1-\Deltass \right)\ ,
+    \label{eq:qsqd}
+\end{equation}
+%
+while that of the MNP is
+%
+\begin{equation}
+    \qmnp = \left\langle \int \bm{j}\left(T^\text{s.s.}\right)\cdot
+    \bm{\emnpin}\left(T^{s.s}\right)
+    dV\right\rangle \ ,
+%    \qmnp = \left\langle \bm{j}\cdot \bm{\emnpin} \right\rangle V \ ,
+    \label{eq:qmnp}
+\end{equation}
+%
+where
+%
+\begin{equation}
+    \bm j(t) = \frac{1}{V}\frac{d}{d t} \pmnp(t) 
+    \label{eq:current_density}
+\end{equation}
+%
+is the current density in the MNP~\cite{artuso_strongly_2010}\note{(is this the
+correct formula for current density?)} and
+$\emnpin(t)$ is the field inside the MNP. For a sphere it can be shown
+that~\cite{landau_electrodynamics_1984}
+%
+\begin{equation}
+    \emnpin(t) = \emnp(t) - \frac{4}{3}\pi \pmnp(t) \ .
+    \label{eq:emnpin}
+\end{equation}
+%
+We define the time-average of a function $h(t)$ as
+%
+\begin{equation}
+    \langle h(t)\rangle \equiv \frac{1}{\delta T}\int_{t}^{t+\delta T} h(t')dt'
+    \ ,
+    \label{eq:time-average}
+\end{equation}
+%
+and choose $\delta_t$ to be one period of the wave,
+%
+\begin{equation}
+    \delta t = \frac{2\pi}{\omega_L} \ .
+    \label{eq:delta_t}
+\end{equation}
+%
+\\
+
+\noindent{\it {\large (i) Solution in the PEOM}}\\
+
+In the PEOM solution (see
+\cref{sec:sqd-peom}), $\Delta(t)$ is found by numerically solving
+\cref{eq:eoms} and so $\Deltass$, and therefore $\qsqd$ (\cref{eq:qsqd}), can
+be calculated trivially assuming the simulation time is long enough that a
+steady-state can be said to have been reached.
+
+To calculate $\qmnp$ from
+\cref{eq:qmnp}, one must first calculate the current density from
+\cref{eq:current_density}. The derivative, $\delta/\delta t\pmnp(t)$, may be
+calculated numerically though it can be shown from
+\cref{eq:pmnpt_peom,eq:s_k_mnp} (see Appendix REF) that
+%
+\begin{equation}
+    \frac{d\pmnp}{d t} = \sum_{k=1}^N c_k \left(
+    \omega_k\imag{s_k(t)}
+        -\gamma_k\real{s_k(t)}\right) \ .
+    \label{eq:dpdt}
+\end{equation}
+%
+The time-average in \cref{eq:qmnp} can then be found by numerical
+integration. For a small time-step, $h$, in the fourth order Runge-Kutta
+method, we found the crude approximation,
+%
+\begin{equation}
+    \int_{t_n}^{t_m} f(t')dt' \approx h \sum_{i=n}^{m} f(t_i) \ ,
+    \label{eq:numerical_int}
+\end{equation}
+%
+to be sufficient.\\
+
+\noindent{\it {\large (ii) Analytical Solution}}\\
+
+As mentioned in \cref{sec:sqd-anal}, $\Deltass$, and therefore $\qsqd$, can be
+found analytically by solving \cref{eq:eoms} within the RWA.
+
+Within the RWA, it can be shown that field felt by the MNP and its polarization
+are given, respectively, by (see Appendix REF)
+%
+\begin{align}
+    \emnp(t) &= \bemnp(t)
+    e^{-i\omega_L t} + \text{c.c.} \ ,\label{eq:emnp_rwa} \\
+    \pmnp(t) &= \epsb \alphamnp(\omega_L)\bemnp(t)
+    e^{-i\omega_L t} + \text{c.c.} \ , \label{eq:pmnp_rwa}
+    \qquad
+\end{align}
+%
+where
+%
+\begin{equation}
+    \bemnp(t) = \frac{E_0}{2} + \frac{g\mut}{\epsb R^3}\bar\rho_{21}(t) \ .
+    \label{eq:emnp_bar}
+\end{equation}
+
+If we substitute \eqref{eq:emnp_rwa,eq:pmnp_rwa} into Eq.~\eqref{eq:qmnp} and
+assume then using the RWA yields the following (see Appendix REF),
+%However, $\frac{\partial\pmnp}{\partial t}\pmnp=\frac{1}{2}\frac{\partial}{\partial
+%t}\left(\pmnp^2\right)$ and it can be shown that $\pmnp^2$ is independent of $t$ in the RWA which
+%means $\frac{\partial}{\partial t}\left( \pmnp^2 \right)=0$. Hence, the second
+%term in~\eqref{eq:qmnp_RWA} vanishes so that in the RWA we can replace
+%$\emnpin$ with $\emnp$ in Eq.~\eqref{eq:qmnp} which can be calculated to give
+%[check $\epsb$ factor]
+%
+%
+\begin{equation}
+    \qmnp = 2\omega_L \imag{\alphamnp(\omega_L)} \left|\frac{E_0}{2} +
+    \frac{g\mut}{\epsb R^3}\rhoss \right|^2 \ .
+%    &\left\{ 
+%        \frac{E_0^2}{4}
+%        + \frac{g\mut E_0}{\epsb R^3}\real{\bar\rho_{21}}
+%        + \left(\frac{g\mut}{\epsb R^3}|\bar\rho_{21}|\right)^2
+%        \right\}  . \
+    \label{eq:qmnp_ss}
+\end{equation}
+%
+%where
+%%
+%\begin{equation}
+%    \bemnp = \frac{E_0}{2} + \frac{g\mut}{R^3}\rhoss \ .
+%    \label{eq:emnp_bar_ss}
+%\end{equation}

@@ -1,0 +1,66 @@
+\section{Generalization to Anisotropic Media}\label{app:anis}
+
+In the case of anisotropic media, the effective fields in \cref{eq:fields1}
+become
+%
+\begin{align}
+    \veqs(t) = \veext(t) + \frac{3\hat n\left( \vpcs(t)\cdot\hat n
+    \right)-\vpcs(t)}{\epsb R^3} \ ,\\
+    \vecs(t) = \veext(t) + \frac{3\hat n\left( \vpqs(t)\cdot\hat n
+    \right)-\vpqs(t)}{\epsb R^3} \ ,
+\end{align}
+%
+%%
+%\begin{align}
+%    \veqs(t) = \veext(t) + \frac{\pcs(t)
+%    }{\epsb R^3} \vec g_{CS}\ ,\\
+%    \vecs(t) = \veext(t) + \frac{\pqs(t)
+%    }{\epsb R^3} \vec g_{QS}\ ,
+%\end{align}
+%%
+%where 
+%$    \vec g_{CS(QS)} = 3\hat n \left( \hat p_{CS(QS)} \cdot \hat n \right) -
+%    \hat p_{CS(QS)}$
+%%
+%and $\hat p_{CS(QS)}$ is the unit vector pointing in the
+%direction of $\vpcs(t)$ ($\vpqs(t)$). 
+%
+and the polarizability of the classical
+system now becomes a tensor
+%
+\begin{equation}
+    \bm\alpha = 
+    \begin{pmatrix}
+        \alpha^{(xx)} & \alpha^{(xy)} & \alpha^{(xz)} \\
+        \alpha^{(yx)} & \alpha^{(yy)} & \alpha^{(yz)} \\
+        \alpha^{(zx)} & \alpha^{(zy)} & \alpha^{(zz)} 
+    \end{pmatrix} \ ,
+\end{equation}
+%
+The theory then proceeds as in \cref{sec:peom} except in how $\vpcs(t)$ is expanded: we expand
+the $i$-th vector component ($i=x,y,z$) as 
+%
+\begin{equation}
+    \pcs^{(i)}(t) = \sum_{j=x,y,z} \sum_{k=1}^{N_{ij}} c_k^{(ij)}
+    \real{s_k^{(ij)}(t)} \ ,
+\end{equation}
+%
+where the functions $s_k^{(ij)}(t)$ are found from the differential equations
+%
+\begin{equation}
+    \dot s_k^{(ij)} = -\left( \gamma_k^{(ij)} + \imagn\omega_k^{(ij)}
+    \right)s_k^{(ij)} + \imagn\epsb \ecs^{(i)}(t) \ ,
+\end{equation}
+%
+for $i,j=x,y,z$ and $k=1,\ldots,N_{ij}$ and the parameters are found by fitting
+each component of the $\bm \alpha$ tensor to
+%
+\begin{equation}
+    \alpha^{(ij)}(\omega) = \sum_{k=1}^{N_{ij}} c_k^{(ij)} \left[  \frac{1}{
+        (\omega_k^{(ij)}-\omega)
+     - \imagn\gamma_k^{(ij)}} 
+     + \frac{1}{ (\omega_{k}^{(ij)}+\omega)
+ + \imagn\gamma_k^{(ij)}} \right] \ ,
+\end{equation}
+%
+for $i,j=x,y,z$.
